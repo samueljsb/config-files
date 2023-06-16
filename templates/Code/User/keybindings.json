@@ -1,0 +1,33 @@
+[
+  // Disable python terminal
+  {
+      "key": "shift+enter",
+      "command": "-python.execSelectionInTerminal"
+  },
+  // Remap save without formatting
+  {
+      "key": "cmd+k s",
+      "command": "-workbench.action.files.saveWithoutFormatting"
+  },
+  {
+      "key": "ctrl+cmd+s",
+      "command": "workbench.action.files.saveWithoutFormatting"
+  },
+  // Disable opening the terminal
+  {
+      "key": "shift+cmd+c",
+      "command": "-workbench.action.terminal.openNativeConsole",
+      "when": "!terminalFocus"
+  },
+  {
+      "key": "ctrl+`",
+      "command": "-workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+    },
+    // Disable the 'find' dialog in the file tree pane
+    {
+      "key": "cmd+f",
+      "command": "-list.find",
+      "when": "listFocus && listSupportsFind"
+    }
+]

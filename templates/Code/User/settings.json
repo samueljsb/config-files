@@ -1,0 +1,98 @@
+{
+  "[html]": {
+    "editor.formatOnSaveMode": "file"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.rulers": [
+      80
+    ]
+  },
+  "[plaintext]": {
+    "editor.wordWrap": "on"
+  },
+  "[python]": {
+    "editor.formatOnSaveMode": "file",
+    "editor.rulers": [
+      88
+    ]
+  },
+  "[restructuredtext]": {
+    "editor.rulers": [
+      79
+    ]
+  },
+  "[yaml]": {
+    "editor.formatOnSaveMode": "file"
+  },
+  "color-highlight.markRuler": false,
+  "color-highlight.markerType": "dot-after",
+  "debug.showInStatusBar": "never",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.insertSpaces": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "files.associations": {
+    "*.html": "html",
+    "*.md": "markdown"
+  },
+  "files.exclude": {
+    "**/*.egg-info": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/.vscode": true,
+    "**/__pycache__": true
+  },
+  "files.participants.timeout": 0,
+  "git.enableStatusBarSync": false,
+  "git.mergeEditor": false,
+  "githubPullRequests.pullBranch": "never",
+  "html.format.enable": false,
+  "intellicodeApiExamples.python.enabled": false,
+  "intellicodeApiExamples.typescript.enabled": false,
+  "material-icon-theme.files.associations": {
+    "*.sqlite3": "database",
+    ".flake8": "python-misc",
+    ".git-blame-ignore-revs": "git",
+    ".ruby-version": "ruby",
+    "TODO": "contributing",
+    "pyproject.toml": "python-misc",
+    "setup.cfg": "python-misc"
+  },
+  "material-icon-theme.folders.associations": {
+    ".mypy_cache": "python",
+    "_layouts": "template",
+    "migrations": "database",
+    "venv": "environment"
+  },
+  "material-icon-theme.languages.associations": {
+    "dockerfile": "docker"
+  },
+  "openInGitHub.remote.branch": "HEAD",
+  "openInGitHub.useLocalBranch": false,
+  "openInGitHub.useLocalLine": true,
+  "openInGitHub.useLocalRange": true,
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "restructuredtext.editor.listEditing.list.indentationSize": "inherit",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "workbench.iconTheme": "material-icon-theme"
+}

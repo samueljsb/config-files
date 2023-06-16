@@ -1,0 +1,12 @@
+# MacOS
+.DS_Store
+
+# Config files
+.vscode
+
+# Temporary files
+*~
+*.swp
+
+# Personal notes
+TODO

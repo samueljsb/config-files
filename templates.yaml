@@ -1,0 +1,30 @@
+root_template_dir: ./templates
+config_files:
+-   output_dir: '~'
+    templates:
+    -   template: .editorconfig
+    -   template: .pdbrc.py
+    -   template: .pypirc
+    -   template: .ssh/config
+    -   template: .zshrc
+-   # config
+    output_dir: ~/.config/
+    templates:
+    -   template: gh/config.yml
+    -   template: git/commit-msg.txt
+    -   template: git/config
+    -   template: git/ignore
+    -   template: python/startup.py
+    -   template: starship.toml
+    -   template: vim/vimrc
+-   output_dir: ~/Library/Application Support/
+    templates:
+    -   template: Code/User/keybindings.json
+    -   template: Code/User/settings.json
+    -   template: Rectangle/RectangleConfig.json
+-   # git hooks
+    output_dir: ~/.local/share/git-core/templates
+    templates:
+    -   template: git/prepare_commit_msg.py
+        destination: hooks/prepare-commit-msg
+        is_executable: true

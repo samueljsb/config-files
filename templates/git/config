@@ -1,0 +1,95 @@
+[user]
+  name = {{ git_user.name }}
+  email = {{ git_user.email }}
+{% if git_user.signingkey %}
+  signingkey = {{ git_user.signingkey }}
+
+[gpg]
+  format = ssh
+
+{% if one_password_agent %}
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+{% endif %}
+
+[commit]
+  gpgsign = true
+
+{% endif %}
+
+[alias]
+  # Make some things prettier.
+  grep = grep --break --heading
+  lg = log --oneline --graph --decorate
+
+  # Convenience.
+  s = status --short
+
+  # Delete branches that have been deleted on the remote (e.g. closed PRs in GitHub).
+  gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+
+[color]
+  ui = true
+
+# Use a template for the commit message.
+[commit]
+  template = ~/.config/git/commit-msg.txt
+  verbose = true
+
+[core]
+  autocrlf = input
+  editor = vim
+  fsmonitor = true
+
+[diff]
+  relative = true
+
+[fetch]
+  prune = true
+
+[grep]
+  lineNumber = true
+
+[help]
+  autocorrect = 1
+
+[init]
+  defaultBranch = main
+  templateDir = ~/.local/share/git-core/templates
+
+[merge]
+  conflictStyle = diff3
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+  default = simple
+
+[rebase]
+  autosquash = true
+
+[submodule]
+  recurse = true
+
+# Use ssh for GitHub.
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
+# diff-so-fancy
+[pager]
+  diff = diff-so-fancy | $PAGER
+
+[color "diff"]
+  meta = 11
+  frag = "magenta bold"
+  commit = "yellow bold"
+  new = "green bold"
+  whitespace = "red reverse"
+
+[color "diff-highlight"]
+  oldNormal = "red bold"
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
