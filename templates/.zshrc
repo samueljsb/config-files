@@ -201,6 +201,8 @@ export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/startup.py
 export PIP_REQUIRE_VIRTUALENV=1
 
 export PIPX_DEFAULT_PYTHON=python3.11
+export PIPX_HOME=$XDG_STATE_HOME/pipx
+export PIPX_BIN_DIR=$HOME/.local/bin
 
 export VIRTUALENV_CONFIG_FILE=$XDG_CONFIG_HOME/virtualenv/virtualenv.ini
 
