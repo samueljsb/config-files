@@ -299,9 +299,9 @@ alias kdb=kraken-db
 function all-dbs-count(){
   all-dbs --all "select count(1) from $@"
 }
+
+
 {% endif %}
-
-
 #####
 
 # Add user bin directory to PATH
