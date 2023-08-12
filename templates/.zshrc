@@ -198,6 +198,8 @@ fi
 
 export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/startup.py
 
+export MYPY_CACHE_DIR=$XDG_CACHE_HOME/mypy
+
 export PIP_REQUIRE_VIRTUALENV=1
 
 export PIPX_DEFAULT_PYTHON=python3.11
