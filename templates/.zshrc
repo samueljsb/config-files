@@ -306,3 +306,13 @@ function all-dbs-count(){
 
 # Add user bin directory to PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+
+######################
+# Local customization
+######################
+
+LOCALRC=$XDG_CONFIG_HOME/zsh/local
+if [[ -a $LOCALRC ]]; then
+  . $LOCALRC
+fi
