@@ -247,7 +247,7 @@ if [ -x "$(command -v bat)" ]; then
 fi
 
 {% if one_password_agent %}
-  export SSH_AUTH_SOCK={{ one_password_agent }}
+export SSH_AUTH_SOCK='{{ one_password_agent }}'
 {% endif %}
 
 if [ -x "$(command -v mcfly)" ]; then
