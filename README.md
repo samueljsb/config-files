@@ -19,7 +19,7 @@ least set up 1Password (for SSH key) and Homebrew (to install all the packages).
 4. install `nox` and run the bootstrap script:
 
     ```sh
-    VENV = /tmp/config-files-bootstrap
+    VENV=/tmp/config-files-bootstrap
     python -m venv $VENV
     $VENV/bin/python -m pip install nox
     $VENV/bin/python -m nox -s bootstrap

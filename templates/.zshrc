@@ -198,6 +198,8 @@ fi
 
 export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/startup.py
 
+export MYPY_CACHE_DIR=$XDG_CACHE_HOME/mypy
+
 export PIP_REQUIRE_VIRTUALENV=1
 
 export PIPX_DEFAULT_PYTHON=python3.11
@@ -283,7 +285,34 @@ alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false &
 export PATH="/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gawk/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:$PATH"
 
 
+{% if kraken %}
+################
+# Work (Kraken)
+################
+
+# kraken-db-tools
+export KRAKEN_CLIENT=oegb
+export KRAKEN_DB_PG_CLIENT=pgcli
+export KRAKEN_DB_CONCURRENCY=26
+alias kdb=kraken-db
+
+function all-dbs-count(){
+  all-dbs --all "select count(1) from $@"
+}
+{% endif %}
+
+
 #####
 
 # Add user bin directory to PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+
+######################
+# Local customization
+######################
+
+LOCALRC=$XDG_CONFIG_HOME/zsh/local
+if [[ -a $LOCALRC ]]; then
+  . $LOCALRC
+fi

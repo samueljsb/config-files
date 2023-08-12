@@ -4,3 +4,4 @@ git_user:
   signingkey:
 one_password_agent: ~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock
 macos: true
+kraken: false
