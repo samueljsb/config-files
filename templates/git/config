@@ -53,6 +53,10 @@
 [help]
   autocorrect = 1
 
+[index]
+  # workaround from tummychow/git-absorb#81 to compensate for libgit2/libgit2#6531
+  skipHash = false
+
 [init]
   defaultBranch = main
   templateDir = ~/.local/share/git-core/templates
