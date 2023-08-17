@@ -1,0 +1,19 @@
+name: tests
+
+on:
+  push:
+    paths:
+      - 'bin/**'
+
+
+jobs:
+  test_bin:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: python -Im pip install nox
+    - run: python -Im nox -s test_bin
