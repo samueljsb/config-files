@@ -237,9 +237,7 @@ else
 fi
 
 # pager options
-# -X is needed to fix a bug with the --quit-if-one-screen feature in old
-# versions of less. Unfortunately, it also breaks mouse-wheel support.
-export LESS='-SRFX --tabs=4'
+export LESS='-SRF --tabs=4'
 
 if [ -x "$(command -v bat)" ]; then
   export PAGER='bat -p'
