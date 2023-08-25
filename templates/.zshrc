@@ -263,9 +263,9 @@ fi
 # Lazy loading
 # some tools take a long time to load, but I use them very rarely
 function nvm(){
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+  . "$NVM_DIR/nvm.sh"
+  . "$NVM_DIR/bash_completion"
 
   nvm $@
 }
