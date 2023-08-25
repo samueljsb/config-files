@@ -8,6 +8,7 @@ defaults write com.apple.ncprefs content_visibility -int 2  # notif previews onl
 
 defaults write com.apple.dock auto-hide -bool true
 defaults write com.apple.dock mru-spaces -bool false # do not rearrange spaces
+defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock showAppExposeGestureEnabled -bool false
 defaults write com.apple.dock tile-size -int 64
