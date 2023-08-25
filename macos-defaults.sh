@@ -1,17 +1,16 @@
 #!/bin/sh
 
 defaults write com.apple.ncprefs content_visibility -int 2  # notif previews only when unlocked
-defaults write NSGlobalDomain AppleLocale -string "en_GB"
 
 
 # Dock
 # ====
 
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock mruspaces -bool false # do not rearrange spaces
+defaults write com.apple.dock auto-hide -bool true
+defaults write com.apple.dock mru-spaces -bool false # do not rearrange spaces
+defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock showAppExposeGestureEnabled -bool false
-defaults write com.apple.dock showrecents -bool false
-defaults write com.apple.dock tilesize -int 64
+defaults write com.apple.dock tile-size -int 64
 
 killall Dock
 
@@ -34,7 +33,7 @@ killall Finder
 # =======
 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-defaults write com.apple.sharingd DiscoverableMode -string "Everyone"
+defaults write com.apple.sharingd DiscoverableMode -string "Contacts Only"
 
 
 # Siri
