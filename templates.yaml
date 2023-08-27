@@ -14,6 +14,7 @@ config_files:
     -   template: git/commit-msg.txt
     -   template: git/config
     -   template: git/ignore
+    -   template: npm/npmrc
     -   template: python/startup.py
     -   template: starship.toml
     -   template: vim/vimrc
