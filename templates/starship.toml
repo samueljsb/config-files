@@ -34,9 +34,9 @@ disabled=false
 symbol = " "
 
 [battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+full_symbol = "󰁹"
+charging_symbol = "󰂄"
+discharging_symbol = "󰂃"
 
 [conda]
 symbol = " "
@@ -46,7 +46,7 @@ symbol = " "
 
 [directory]
 style = "bold blue"
-read_only = " "
+read_only = " 󰌾"
 
 [docker_context]
 symbol = " "
@@ -73,10 +73,10 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
 symbol = " "
@@ -85,7 +85,7 @@ symbol = " "
 symbol = " "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 
 [perl]
 symbol = " "
@@ -107,4 +107,4 @@ symbol = " "
 symbol = " "
 
 [swift]
-symbol = "ﯣ "
+symbol = "󰛥 "

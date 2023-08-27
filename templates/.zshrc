@@ -66,8 +66,8 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search  # Up
 bindkey "^[[B" down-line-or-beginning-search  # Down
 
-. /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-. /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+. $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 ##########
@@ -192,10 +192,6 @@ function newpr() {
 
 alias python=python3
 
-if [ -x "$(command -v aactivator)" ]; then
-  eval "$(aactivator init)"
-fi
-
 export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/startup.py
 
 export MYPY_CACHE_DIR=$XDG_CACHE_HOME/mypy
@@ -207,6 +203,10 @@ export PIPX_HOME=$XDG_STATE_HOME/pipx
 export PIPX_BIN_DIR=$HOME/.local/bin
 
 export VIRTUALENV_CONFIG_FILE=$XDG_CONFIG_HOME/virtualenv/virtualenv.ini
+
+if [ -x "$(command -v $PIPX_BIN_DIR/aactivator)" ]; then
+  eval "$($PIPX_BIN_DIR/aactivator init)"
+fi
 
 alias zen="python -c 'import this'"
 
@@ -260,12 +260,16 @@ if [ -x "$(command -v starship)" ]; then
   eval "$(starship init zsh)"
 fi
 
+# PostgreSQL
+# CLI tools that come with the app.
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+
 # Lazy loading
 # some tools take a long time to load, but I use them very rarely
 function nvm(){
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+  . "$NVM_DIR/nvm.sh"
+  . "$NVM_DIR/bash_completion"
 
   nvm $@
 }
@@ -280,7 +284,7 @@ alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true &&
 alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Prefer GNU tools over the MacOS BSD ones.
-export PATH="/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gawk/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
 
 
 {% if kraken %}
