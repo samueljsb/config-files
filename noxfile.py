@@ -91,6 +91,7 @@ BREW_PACKAGES = (
     'exa',
     'fzf',
     'less',
+    'cantino/mcfly/mcfly',
     'pipx',
     'starship',
     'zsh',
