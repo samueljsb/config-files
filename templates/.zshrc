@@ -266,13 +266,17 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # Lazy loading
 # some tools take a long time to load, but I use them very rarely
-function nvm(){
+function _nvm_init(){
+  unalias nvm npm node
+
   export NVM_DIR="$XDG_CONFIG_HOME/nvm"
   . "$NVM_DIR/nvm.sh"
   . "$NVM_DIR/bash_completion"
-
-  nvm $@
 }
+
+alias nvm='_nvm_init; nvm'
+alias npm='_nvm_init; npm'
+alias node='_nvm_init; node'
 
 
 ########
