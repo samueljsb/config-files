@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE=true . $ZSH/oh-my-zsh.sh
 # zsh & oh-my-zsh
 ##################
 
-HISTFILE=$XDG_STATE_HOME/zsh_history
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -238,6 +238,7 @@ fi
 
 # pager options
 export LESS='-SRF --tabs=4'
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 
 if [ -x "$(command -v bat)" ]; then
   export PAGER='bat -p'
@@ -263,9 +264,13 @@ fi
 # PostgreSQL
 # CLI tools that come with the app.
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 
-# Lazy loading
-# some tools take a long time to load, but I use them very rarely
+# Node
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/repl_history
+
+# lazy-load nvm: it takes a long time to load, but I use it very rarely
 function _nvm_init(){
   unalias nvm npm node
 
