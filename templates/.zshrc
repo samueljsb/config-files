@@ -229,7 +229,7 @@ alias local-ip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
 # ls & exa
 export LSCOLORS=gxfxhxdxcxegedabagacad
 if [ -x "$(command -v exa)" ]; then
-  alias ll="exa --long --git --header --group"
+  alias ll="exa --long --header --group"
   alias la="ll --all"
 else
   alias ll='ls -lh'
