@@ -152,20 +152,6 @@ def pipx(session: nox.Session) -> None:
         session.run('pipx', 'install', package)
 
 
-NPM_PACKAGES = (
-)
-
-
-@nox.session(python=False)
-def npm(session: nox.Session) -> None:
-    """Install packages with npm."""
-    if not shutil.which('npm'):
-        session.error('npm not installed')
-
-    for package in NPM_PACKAGES:
-        session.run('npm', 'install', '--global', package)
-
-
 VS_CODE_EXTENSIONS = (
         # VS Code
         'aaron-bond.better-comments',
