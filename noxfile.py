@@ -109,6 +109,7 @@ BREW_MACOS_PACKAGES = (
     'gawk',  # awk
     'gnu-sed',  # sed
     'grep',  # egrep, fgrep, grep
+    'trash',
 )
 
 
@@ -152,7 +153,6 @@ def pipx(session: nox.Session) -> None:
 
 
 NPM_PACKAGES = (
-    'trash-cli',
 )
 
 
