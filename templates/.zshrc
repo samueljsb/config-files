@@ -2,22 +2,22 @@
 # XDG
 ######
 
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_STATE_HOME=$HOME/.local/state
-export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 
 ############
 # oh-my-zsh
 ############
 
-export ZSH=$XDG_DATA_HOME/oh-my-zsh
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 plugins=(
   colored-man-pages
 )
 export ZSH_DISABLE_COMPFIX=true
-DISABLE_AUTO_UPDATE=true . $ZSH/oh-my-zsh.sh
+DISABLE_AUTO_UPDATE=true . "$ZSH/oh-my-zsh.sh"
 
 
 ##################
@@ -66,8 +66,8 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search  # Up
 bindkey "^[[B" down-line-or-beginning-search  # Down
 
-. $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-. $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+. "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 
 ##########
@@ -151,8 +151,8 @@ git diff ORIG_HEAD HEAD --name-only --no-relative | grep --silent "$@"
 
 # "Git refresh"
 function grf() {
-  git checkout $(_git_main_branch) || return
-  git pull origin $(_git_main_branch_origin) || return
+  git checkout "$(_git_main_branch)" || return
+  git pull origin "$(_git_main_branch_origin)" || return
   gbda
 
   clear
@@ -168,21 +168,21 @@ function grf() {
 }
 
 function gfu(){
-  commit_sha=$(git log --pretty=format:"%h %s" --no-merges origin/HEAD.. | fzf | cut -c -7)
+  commit_sha="$(git log --pretty=format:"%h %s" --no-merges origin/HEAD.. | fzf | cut -c -7)"
 
-  git commit --fixup $commit_sha $@
+  git commit --fixup "$commit_sha" $@
 }
 
 function gswf(){
-  git branch --format='%(refname:short)' | fzf --select-1 --query=$@ | xargs git switch
+  git branch --format='%(refname:short)' | fzf --select-1 --query="$@" | xargs git switch
 }
 
 # Create a new PR in the origin repo
 function newpr() {
-  currentBranch=$(git branch --show-current)
+  currentBranch="$(git branch --show-current)"
 
-  git push --set-upstream origin $currentBranch || return
-  gh pr create --fill --web --head $currentBranch
+  git push --set-upstream origin "$currentBranch" || return
+  gh pr create --fill --web --head "$currentBranch"
 }
 
 
@@ -192,25 +192,25 @@ function newpr() {
 
 alias python=python3
 
-export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/startup.py
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
-export MYPY_CACHE_DIR=$XDG_CACHE_HOME/mypy
+export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
 
 export PIP_REQUIRE_VIRTUALENV=1
 
 export PIPX_DEFAULT_PYTHON=python3.11
-export PIPX_HOME=$XDG_STATE_HOME/pipx
-export PIPX_BIN_DIR=$HOME/.local/bin
+export PIPX_HOME="$XDG_STATE_HOME/pipx"
+export PIPX_BIN_DIR="$HOME/.local/bin"
 
-export VIRTUALENV_CONFIG_FILE=$XDG_CONFIG_HOME/virtualenv/virtualenv.ini
+export VIRTUALENV_CONFIG_FILE="$XDG_CONFIG_HOME/virtualenv/virtualenv.ini"
 
-if [ -x "$(command -v $PIPX_BIN_DIR/aactivator)" ]; then
-  eval "$($PIPX_BIN_DIR/aactivator init)"
+if [ -x "$(command -v "$PIPX_BIN_DIR/aactivator")" ]; then
+  eval "$("$PIPX_BIN_DIR/aactivator" init)"
 fi
 
 alias zen="python -c 'import this'"
 
-alias tmpvenv='cd $(mktmpvenv -p black flake8 isort mypy rich); . venv/bin/activate'
+alias tmpvenv='cd "$(mktmpvenv -p black flake8 isort mypy rich)"; . venv/bin/activate'
 
 # Kill mypy processes.
 # Sometimes I end up with lots of concurrent mypy processes, which hog the CPU.
@@ -323,7 +323,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # Local customization
 ######################
 
-LOCALRC=$XDG_CONFIG_HOME/zsh/local
-if [[ -a $LOCALRC ]]; then
-  . $LOCALRC
+LOCALRC="$XDG_CONFIG_HOME/zsh/local"
+if [[ -a "$LOCALRC" ]]; then
+  . "$LOCALRC"
 fi
