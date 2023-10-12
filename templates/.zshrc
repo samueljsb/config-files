@@ -288,6 +288,7 @@ alias npm='_nvm_init; npm'
 alias node='_nvm_init; node'
 
 
+{% if macos %}
 ########
 # macOS
 ########
@@ -300,6 +301,7 @@ alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false &
 export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
 
 
+{% endif %}
 {% if kraken %}
 ################
 # Work (Kraken)
