@@ -300,6 +300,10 @@ alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false &
 # Prefer GNU tools over the MacOS BSD ones.
 export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
 
+{% if not one_password_agent %}
+ssh-add --apple-use-keychain
+{% endif %}
+
 
 {% endif %}
 {% if kraken %}
