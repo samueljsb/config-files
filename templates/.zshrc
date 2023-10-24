@@ -177,6 +177,10 @@ function gswf(){
   git branch --format='%(refname:short)' | fzf --select-1 --query="$@" | xargs git switch
 }
 
+function gaf(){
+  git diff --name-only | fzf --query="$@" | xargs git add
+}
+
 # Create a new PR in the origin repo
 function newpr() {
   currentBranch="$(git branch --show-current)"
