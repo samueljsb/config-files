@@ -178,7 +178,7 @@ function gswf(){
 }
 
 function gaf(){
-  git diff --name-only | fzf --query="$@" | xargs git add
+  git diff --name-only | fzf --multi --query="$@" | xargs git add
 }
 
 # Create a new PR in the origin repo
