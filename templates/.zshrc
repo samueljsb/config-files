@@ -190,6 +190,9 @@ function newpr() {
   gh pr create --fill --web --head "$currentBranch"
 }
 
+# View a PR in the origin repo
+alias viewpr='gh pr view --web'
+
 
 #########
 # Python
