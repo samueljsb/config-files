@@ -168,7 +168,8 @@ function grf() {
 }
 
 function gfu(){
-  commit_sha="$(git log --pretty=format:"%h %s" --no-merges origin/HEAD.. | fzf | cut -c -7)"
+  preview_function='echo {} | cut -c -7 | xargs git show --no-patch --color=always'
+  commit_sha="$(git log --pretty=format:"%h %s" --no-merges origin/HEAD.. | fzf --preview=$preview_function --preview-window='up' | cut -c -7)"
 
   git commit --fixup "$commit_sha" $@
 }
