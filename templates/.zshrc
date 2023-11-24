@@ -179,7 +179,7 @@ function gswf(){
 }
 
 function gaf(){
-  git diff --name-only | fzf --multi --query="$@" | xargs git add
+  git diff --name-only --no-relative | fzf --multi --query="$@" | xargs git -C "$(git rev-parse --show-toplevel)" add
 }
 
 # Create a new PR in the origin repo
