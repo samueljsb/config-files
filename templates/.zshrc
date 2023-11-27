@@ -226,6 +226,14 @@ alias tmpvenv='cd "$(mktmpvenv -p black flake8 isort mypy rich)"; . venv/bin/act
 alias kill-mypy="ps -x | grep -E 'python[\d.]* -m mypy' | grep -v grep | tee /dev/stderr | awk '{print \$1}' | xargs kill -9"
 
 
+#######
+# Rust
+#######
+
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export PATH="$PATH:$CARGO_HOME/bin"
+
+
 ########
 # misc.
 ########
