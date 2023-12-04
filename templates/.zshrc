@@ -194,6 +194,16 @@ function newpr() {
 alias viewpr='gh pr view --web'
 
 
+#######
+# Node
+#######
+
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/repl_history
+
+eval "$(fnm env)"
+
+
 #########
 # Python
 #########
@@ -281,23 +291,6 @@ fi
 # CLI tools that come with the app.
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
-
-# Node
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
-export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/repl_history
-
-# lazy-load nvm: it takes a long time to load, but I use it very rarely
-function _nvm_init(){
-  unalias nvm npm node
-
-  export NVM_DIR="$XDG_CONFIG_HOME/nvm"
-  . "$NVM_DIR/nvm.sh"
-  . "$NVM_DIR/bash_completion"
-}
-
-alias nvm='_nvm_init; nvm'
-alias npm='_nvm_init; npm'
-alias node='_nvm_init; node'
 
 
 {% if macos %}
