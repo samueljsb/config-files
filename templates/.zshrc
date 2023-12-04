@@ -216,7 +216,7 @@ export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
 
 export PIP_REQUIRE_VIRTUALENV=1
 
-export PIPX_DEFAULT_PYTHON=python3.11
+export PIPX_DEFAULT_PYTHON=python3.12
 export PIPX_HOME="$XDG_STATE_HOME/pipx"
 export PIPX_BIN_DIR="$HOME/.local/bin"
 
