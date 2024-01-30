@@ -193,6 +193,10 @@ function newpr() {
 # View a PR in the origin repo
 alias viewpr='gh pr view --web'
 
+function pre-commit-changes() {
+  git diff --relative --name-only | xargs pre-commit run $@ --files
+}
+
 
 #######
 # Node
