@@ -42,6 +42,7 @@
   fsmonitor = true
 
 [diff]
+  algorithm = histogram
   relative = true
 
 [fetch]
