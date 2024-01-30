@@ -168,11 +168,12 @@ VS_CODE_EXTENSIONS = (
         # Git
         'codezombiech.gitignore',
         'fabiospampinato.vscode-open-in-github',
-        'github.vscode-github-actions',
         'sidneys1.gitconfig',
         'waderyan.gitblame',
         # Python
+        'charliermarsh.ruff',
         'lextudio.restructuredtext',
+        'mgesbert.python-path',
         'ms-python.python',
         'ms-python.vscode-pylance',
         # Other
