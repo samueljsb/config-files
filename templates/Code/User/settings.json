@@ -33,7 +33,7 @@
   "editor.detectIndentation": false,
   "editor.fontFamily": "Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.guides.bracketPairs": "active",
   "editor.guides.bracketPairsHorizontal": false,
   "editor.insertSpaces": true,
