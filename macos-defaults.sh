@@ -6,7 +6,7 @@ defaults write com.apple.ncprefs content_visibility -int 2  # notif previews onl
 # Dock
 # ====
 
-defaults write com.apple.dock auto-hide -bool true
+defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock mru-spaces -bool false # do not rearrange spaces
 defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock show-recents -bool false
