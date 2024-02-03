@@ -88,7 +88,7 @@ def test_bin(session: nox.Session) -> None:
 
 BREW_PACKAGES = (
     'bat',
-    'exa',
+    'eza',
     'fzf',
     'less',
     'cantino/mcfly/mcfly',

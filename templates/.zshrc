@@ -256,10 +256,10 @@ alias reload!='. ~/.zshrc'
 
 alias local-ip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
 
-# ls & exa
+# ls & eza
 export LSCOLORS=gxfxhxdxcxegedabagacad
-if [ -x "$(command -v exa)" ]; then
-  alias ll="exa --long --header --group"
+if [ -x "$(command -v eza)" ]; then
+  alias ll="eza --long --header --group"
   alias la="ll --all"
 else
   alias ll='ls -lh'
