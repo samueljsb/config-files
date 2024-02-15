@@ -31,19 +31,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
             'Push a sequence of branches that correspond to a chain of PRs. '
-            'This is useful to run immediately after a successfully rebase '
+            'This is useful to run immediately after a successful rebase '
             'with the `--update-refs` option.'
         ),
     )
     parser.add_argument('base_ref', nargs='?', default='main')
-    # fmt: off
     parser.add_argument(
         '-f', '--force',
         action='store_const', dest='force_flag',
         const='--force', default='--force-with-lease',
         help="force push (default uses 'force-with-lease')",
     )
-    # fmt: on
     args = parser.parse_args()
 
     remotes = _git('remote').split()
@@ -51,7 +49,7 @@ def main() -> int:
 
     branches = _parse_branches(log_lines, args.base_ref, remotes)
     _git('push', '--quiet', args.force_flag, '--atomic', 'origin', *branches)
-    print('pushed branches atomically:', ','.join(branches))
+    print('pushed branches atomically:', ', '.join(branches))
 
     return 0
 
