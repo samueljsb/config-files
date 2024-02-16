@@ -205,6 +205,8 @@ function pre-commit-changes() {
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/repl_history"
 
+export PATH="$PATH:${XDG_DATA_HOME}/npm/bin"
+
 if [ -x "$(command -v fnm)" ]; then
   eval "$(fnm env)"
 fi
