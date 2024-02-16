@@ -40,6 +40,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "boundary",
+  "editor.stickyScroll.enabled": true,
   "editor.suggestSelection": "first",
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
