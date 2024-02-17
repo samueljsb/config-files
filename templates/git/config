@@ -63,7 +63,7 @@
   templateDir = ~/.local/share/git-core/templates
 
 [merge]
-  conflictStyle = diff3
+  conflictStyle = zdiff3
 
 [pull]
   rebase = true
