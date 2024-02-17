@@ -75,6 +75,9 @@
 [rebase]
   autosquash = true
 
+[rerere]
+  enabled = true
+
 [submodule]
   recurse = true
 
