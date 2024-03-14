@@ -7,7 +7,7 @@ import nox
 HERE = os.path.dirname(__file__)
 BIN = os.path.join(HERE, 'bin')
 
-nox.options.sessions = ['config_files', 'bin']
+nox.options.sessions = ['write', 'write_bin']
 
 
 @nox.session(python=False)
@@ -16,8 +16,8 @@ def bootstrap(session: nox.Session) -> None:
 
     Write config files and install all the packages I like to have available.
     """
-    session.notify('config_files')
-    session.notify('bin')
+    session.notify('write')
+    session.notify('write_bin')
     session.notify('brew')
     session.notify('pipx')
     session.notify('npm')
@@ -26,7 +26,7 @@ def bootstrap(session: nox.Session) -> None:
 
 
 @nox.session
-def config_files(session: nox.Session) -> None:
+def write(session: nox.Session) -> None:
     """Write config files."""
     session.install('write-config-files')
     session.run(
@@ -53,7 +53,7 @@ def diff(session: nox.Session) -> None:
 
 
 @nox.session(python=False)
-def bin(session: nox.Session) -> None:
+def write_bin(session: nox.Session) -> None:
     """Copy executables into person bin directory."""
     LOCAL_BIN = os.path.expanduser('~/.local/bin')
     os.makedirs(LOCAL_BIN, exist_ok=True)
