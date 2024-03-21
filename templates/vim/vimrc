@@ -45,6 +45,8 @@ colorscheme codedark
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 
+autocmd BufEnter COMMIT_EDITMSG setlocal colorcolumn=+1
+
 " spelling
 :set spell
 :iabbrev amoutn amount
