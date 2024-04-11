@@ -85,7 +85,9 @@
   "openInGitHub.useLocalRange": true,
   "python.languageServer": "Pylance",
   "restructuredtext.editor.listEditing.list.indentationSize": "inherit",
+  "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "Hack Nerd Font",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.enableNaturalLanguageSearch": false
 }
