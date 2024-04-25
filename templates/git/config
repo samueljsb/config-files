@@ -43,6 +43,7 @@
 
 [diff]
   algorithm = histogram
+  colorMoved = zebra
   relative = true
 
 [fetch]
