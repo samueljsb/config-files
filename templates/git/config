@@ -96,6 +96,10 @@
   commit = "yellow bold"
   new = "green bold"
   whitespace = "red reverse"
+  newMoved = "green dim"
+  newMovedAlternative = "green dim"
+  oldMoved = "red dim"
+  oldMovedAlternative = "red dim"
 
 [color "diff-highlight"]
   oldNormal = "red bold"
