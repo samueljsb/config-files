@@ -236,7 +236,7 @@ fi
 
 alias zen="python -c 'import this'"
 
-alias tmpvenv='cd "$(mktmpvenv -p black flake8 isort mypy rich)"; . venv/bin/activate'
+alias tmpvenv='cd "$(mktmpvenv -p mypy rich)"; . venv/bin/activate'
 
 # Kill mypy processes.
 # Sometimes I end up with lots of concurrent mypy processes, which hog the CPU.
