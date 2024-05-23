@@ -114,7 +114,7 @@ function co-author(){
   git log --author=$1 | grep -m 1 $1 | gsed 's/Author/Co-authored-by/'
 }
 
-# Aliases from OMZ
+# Aliases adapted from OMZ
 alias ga='git add'
 alias gb='git branch'
 alias gbda='git branch --no-color --merged | command grep -vE "^([+*]|\s*$(_git_main_branch)\s*$)" | command xargs -r git branch -d 2>/dev/null'
@@ -129,12 +129,14 @@ alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gd='git diff'
 alias gds='git diff --staged'
+alias gfm='git fetch origin $(_git_main_branch_origin)'
 alias gl='git pull'
 alias glog='git log --oneline --decorate --graph'
 alias gpf='git push --force-with-lease'
 alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias grbm='git rebase $(_git_main_branch)'
+alias grbom='git rebase origin/$(_git_main_branch_origin)'
 alias gst='git status'
 alias gsw='git switch'
 alias gswc='git switch -c'
