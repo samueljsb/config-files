@@ -43,6 +43,7 @@
 
 [diff]
   algorithm = histogram
+  attributesfile = ~/.config/git/attributes
   colorMoved = zebra
   relative = true
 
