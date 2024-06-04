@@ -70,6 +70,11 @@ bindkey "^[[B" down-line-or-beginning-search  # Down
 . "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 
+if [ -x "$(command -v atuin)" ]; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
+
 ##########
 # editors
 ##########
@@ -291,12 +296,6 @@ fi
 {% if one_password_agent %}
 export SSH_AUTH_SOCK='{{ one_password_agent }}'
 {% endif %}
-
-if [ -x "$(command -v mcfly)" ]; then
-  export MCFLY_KEY_SCHEME=vim
-  export MCFLY_INTERFACE_VIEW=BOTTOM
-  eval "$(mcfly init zsh)"
-fi
 
 if [ -x "$(command -v starship)" ]; then
   eval "$(starship init zsh)"
