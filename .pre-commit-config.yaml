@@ -18,6 +18,10 @@ repos:
         exclude: 'templates/Code/User/keybindings\.json'
     -   id: requirements-txt-fixer
     -   id: trailing-whitespace
+-   repo: https://github.com/samueljsb/sort-lines
+    rev: v0.1.2
+    hooks:
+    -   id: sort-lines
 -   repo: https://gitlab.com/bmares/check-json5
     rev: v1.0.0
     hooks:
