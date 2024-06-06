@@ -86,6 +86,9 @@ fi
 
 export VIMINIT='source ~/.config/vim/vimrc'
 
+# Use this to re-build custom spelling files when they change.
+alias ,mkspell='vim + "mkspell! $(echo -e $XDG_CONFIG_HOME/vim/spell/*.add)" +qall'
+
 
 ######
 # git

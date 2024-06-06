@@ -48,6 +48,7 @@ filetype indent plugin on
 autocmd BufEnter COMMIT_EDITMSG setlocal colorcolumn=+1
 
 " spelling
+set spellfile=$XDG_CONFIG_HOME/vim/spell/en.utf-8.add
 :set spell
 :iabbrev amoutn amount
 :iabbrev becasue because

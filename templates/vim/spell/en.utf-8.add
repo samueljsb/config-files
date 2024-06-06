@@ -1,0 +1,11 @@
+# English  # pragma: alphabetize
+recurse
+recurses
+
+# Python  # pragma: alphabetize
+Django
+docstring
+pytest
+
+# Technologies  # pragma: alphabetize
+GraphQL
