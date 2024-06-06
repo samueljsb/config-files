@@ -19,6 +19,7 @@ config_files:
     -   template: python/startup.py
     -   template: starship.toml
     -   template: vim/vimrc
+    -   template: vim/spell/en.utf-8.add
 -   output_dir: ~/Library/Application Support/
     templates:
     -   template: Code/User/keybindings.json
