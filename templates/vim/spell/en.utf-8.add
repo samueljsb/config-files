@@ -1,11 +1,14 @@
-# English  # pragma: alphabetize
+# English
+# pragma: alphabetize
 recurse
 recurses
 
-# Python  # pragma: alphabetize
+# Python
+# pragma: alphabetize
 Django
 docstring
 pytest
 
-# Technologies  # pragma: alphabetize
+# Technologies
+# pragma: alphabetize
 GraphQL
