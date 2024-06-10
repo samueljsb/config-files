@@ -306,6 +306,9 @@ fi
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 
+# Docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
 
 {% if macos %}
 ########
