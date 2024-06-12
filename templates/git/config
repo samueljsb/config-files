@@ -25,6 +25,8 @@
   # Convenience.
   s = status --short
 
+  unstage = restore --staged
+
   # Delete branches that have been deleted on the remote (e.g. closed PRs in GitHub).
   gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
 
