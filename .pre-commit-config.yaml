@@ -19,7 +19,7 @@ repos:
     -   id: requirements-txt-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/samueljsb/sort-lines
-    rev: v0.2.0
+    rev: v0.3.0
     hooks:
     -   id: sort-lines
         args: [--case-insensitive]
@@ -37,7 +37,7 @@ repos:
     hooks:
     -   id: add-trailing-comma
 -   repo: https://github.com/PyCQA/flake8
-    rev: '7.0.0'
+    rev: '7.1.0'
     hooks:
     -   id: flake8
         additional_dependencies: [flake8-bugbear]
