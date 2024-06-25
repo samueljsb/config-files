@@ -8,6 +8,7 @@ repos:
         exclude: 'templates/Code/User/keybindings\.json'
     -   id: check-merge-conflict
     -   id: check-shebang-scripts-are-executable
+    -   id: check-toml
     -   id: check-yaml
     -   id: double-quote-string-fixer
     -   id: end-of-file-fixer

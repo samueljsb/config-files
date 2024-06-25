@@ -10,6 +10,7 @@ config_files:
 -   # config
     output_dir: ~/.config/
     templates:
+    -   template: alacritty/alacritty.toml
     -   template: gh/config.yml
     -   template: git/attributes
     -   template: git/commit-msg.txt
