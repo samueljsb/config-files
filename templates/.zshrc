@@ -77,20 +77,18 @@ autoload -U compinit; compinit
 # editors
 ##########
 
-if [ -x "$(command -v code)" ]; then
-  export EDITOR=code
-elif [ -x "$(command -v vim)" ]; then
-  export EDITOR=vim
-fi
-# Set VISUAL editor (for crontab et al.)
-if [ -x "$(command -v vim)" ]; then
-  export VISUAL=vim
-fi
-
 export VIMINIT='source ~/.config/vim/vimrc'
 
 # Use this to re-build custom spelling files when they change.
 alias ,mkspell='vim + "mkspell! $(echo -e $XDG_CONFIG_HOME/vim/spell/*.add)" +qall'
+
+if [ -x "$(command -v hx)" ]; then
+  export EDITOR=hx
+  export VISUAL=hx
+elif [ -x "$command -v vim}" ]; then
+  export EDITOR=vim
+  export VISUAL=vim
+fi
 
 
 ######
