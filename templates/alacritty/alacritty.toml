@@ -24,7 +24,6 @@ cursor = "#c7c7c7"
 text = "#000000"
 background = "#c1deff"
 
-# 0x Normal colors
 [colors.normal]
 black   = "#3b4244"
 red     = "#d81e00"
@@ -35,7 +34,6 @@ magenta = "#89658e"
 cyan    = "#00a8aa"
 white   = "#dbded8"
 
-# 0x Bright colors
 [colors.bright]
 black   = "#686a66"
 red     = "#f54235"
@@ -45,3 +43,23 @@ blue    = "#84b0d8"
 magenta = "#bc94b7"
 cyan    = "#37e6e8"
 white   = "#f1f1f0"
+
+[[hints.enabled]]
+# copied from default, with modified `mouse.mods`
+command = "open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+mouse.mods = "Command"
+binding = { key = "U", mods = "Control|Shift" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+[keyboard]
+bindings = [
+  # command+N opens new window in home directory
+  { key = "N", mods = "Command", command = { program = "/Applications/Alacritty.app/Contents/MacOS/alacritty"} },
+  # alt+left and alt+right move word-wise left/right
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+]
