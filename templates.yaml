@@ -16,6 +16,8 @@ config_files:
     -   template: git/commit-msg.txt
     -   template: git/config
     -   template: git/ignore
+    -   template: helix/config.toml
+    -   template: helix/languages.toml
     -   template: npm/npmrc
     -   template: python/startup.py
     -   template: skhd/skhdrc

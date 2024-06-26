@@ -40,7 +40,7 @@
 
 [core]
   autocrlf = input
-  editor = vim
+  editor = hx
   fsmonitor = true
 
 [diff]

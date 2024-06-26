@@ -1,0 +1,32 @@
+[language-server.typos]
+command = "typos-lsp"
+
+[language-server.vale]
+command = "vale-ls"
+
+[[language]]
+name = "git-commit"
+language-servers = [
+  "typos",
+  "vale",
+]
+rulers = [72]
+
+[[language]]
+name = "markdown"
+language-servers = [
+  "marksman",
+  "markdown-oxide",
+  "typos",
+  "vale",
+]
+
+[[language]]
+name = "python"
+rulers = [79]
+text-width = 79
+language-servers = [
+  "pylsp",
+  "typos",
+  "vale"
+]

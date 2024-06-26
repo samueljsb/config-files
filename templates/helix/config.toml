@@ -1,0 +1,23 @@
+theme = "dark_plus"
+
+[editor]
+bufferline = "multiple"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false  # show hidden files
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.whitespace.render]
+tab = "all"
