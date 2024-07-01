@@ -199,6 +199,23 @@ function newpr() {
 # View a PR in the origin repo
 alias viewpr='gh pr view --web'
 
+# View files in the origin repo
+function gh-file() {
+  REPO_URL="$(gh repo view --json url --jq .url)"
+
+  for file in "$@"; do
+    open "$REPO_URL/blob/HEAD/$file"
+  done
+}
+
+function gh-blame() {
+  REPO_URL="$(gh repo view --json url --jq .url)"
+
+  for file in "$@"; do
+    open "$REPO_URL/blame/HEAD/$file"
+  done
+}
+
 function pre-commit-changes() {
   git diff --relative --name-only | xargs pre-commit run $@ --files
 }
