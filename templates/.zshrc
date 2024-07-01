@@ -245,6 +245,8 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
 
 export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
 
+export NOX_DEFAULT_VENV_BACKEND='uv|virtualenv'
+
 export PIP_REQUIRE_VIRTUALENV=1
 
 export PIPX_DEFAULT_PYTHON=python3.12
