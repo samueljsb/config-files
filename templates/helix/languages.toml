@@ -10,7 +10,7 @@ language-servers = [
   "typos",
   "vale",
 ]
-rulers = [72]
+rulers = [73]
 
 [[language]]
 name = "markdown"
@@ -23,7 +23,7 @@ language-servers = [
 
 [[language]]
 name = "python"
-rulers = [79]
+rulers = [80]
 text-width = 79
 language-servers = [
   "pylsp",
