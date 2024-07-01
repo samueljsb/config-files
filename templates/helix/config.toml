@@ -3,6 +3,7 @@ theme = "dark_plus"
 [editor]
 bufferline = "multiple"
 color-modes = true
+cursorline = true
 
 [editor.cursor-shape]
 insert = "bar"
