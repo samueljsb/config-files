@@ -65,6 +65,12 @@ bindkey "^[[B" down-line-or-beginning-search  # Down
 . "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 . "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+# Load fzf before atuin
+# fzf binds its own history search to ctrl+r;
+# atuin needs to run afterwards to override it.
+if [ -x "$(command -v fzf)" ]; then
+  eval "$(fzf --zsh)"
+fi
 
 if [ -x "$(command -v atuin)" ]; then
   eval "$(atuin init zsh --disable-up-arrow)"
