@@ -76,8 +76,6 @@ if [ -x "$(command -v atuin)" ]; then
   eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
-autoload -U compinit; compinit
-
 
 ##########
 # editors
