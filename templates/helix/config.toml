@@ -22,3 +22,6 @@ display-inlay-hints = true
 
 [editor.whitespace.render]
 tab = "all"
+
+[keys.normal]
+"A-q" = ["extend_to_line_bounds", ":reflow"]
