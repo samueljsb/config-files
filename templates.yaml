@@ -29,7 +29,6 @@ config_files:
     templates:
     -   template: Code/User/keybindings.json
     -   template: Code/User/settings.json
-    -   template: Rectangle/RectangleConfig.json
 -   # git hooks
     output_dir: ~/.local/share/git-core/templates
     templates:
