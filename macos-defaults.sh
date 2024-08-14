@@ -12,6 +12,7 @@ defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock showAppExposeGestureEnabled -bool false
 defaults write com.apple.dock tile-size -int 64
+defaults write com.apple.dock expose-group-apps -bool true
 
 # disable hot corners
 defaults write com.apple.dock wvous-bl-corner -int 0
