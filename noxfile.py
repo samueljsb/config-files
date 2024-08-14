@@ -142,8 +142,7 @@ PIPX_PACKAGES = (
     'pgcli',
     'pre-commit',
     'tox',
-    'twine',
-    'virtualenv',
+    'uv',
 )
 
 
