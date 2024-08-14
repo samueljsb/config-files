@@ -138,6 +138,7 @@ def brew(session: nox.Session) -> None:
 PIPX_PACKAGES = (
     'aactivator',
     'nox',
+    'litecli',
     'pgcli',
     'pre-commit',
     'tox',
