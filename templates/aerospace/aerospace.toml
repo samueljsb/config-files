@@ -53,6 +53,7 @@ alt-a = 'workspace A'  # alternative (secondary)
 alt-w = 'workspace W'  # web browser
 alt-t = 'workspace T'  # notes
 alt-m = 'workspace M'  # meetings
+alt-g = 'workspace G'  # Toggl or other tracking
 
 ctrl-alt-cmd-1 = 'move-node-to-workspace 1'
 ctrl-alt-cmd-2 = 'move-node-to-workspace 2'
@@ -68,6 +69,7 @@ ctrl-alt-cmd-a = 'move-node-to-workspace A'
 ctrl-alt-cmd-w = 'move-node-to-workspace W'
 ctrl-alt-cmd-t = 'move-node-to-workspace T'
 ctrl-alt-cmd-m = 'move-node-to-workspace M'
+ctrl-alt-cmd-g = 'move-node-to-workspace G'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
