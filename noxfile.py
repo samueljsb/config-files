@@ -93,8 +93,6 @@ BREW_PACKAGES = (
     'eza',
     'fzf',
     'helix',
-    'koekeishiya/formulae/yabai',
-    'koekeishiya/formulae/skhd',
     'less',
     'pipx',
     'starship',
