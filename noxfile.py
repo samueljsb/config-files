@@ -20,7 +20,6 @@ def bootstrap(session: nox.Session) -> None:
     session.notify('write_bin')
     session.notify('brew')
     session.notify('pipx')
-    session.notify('npm')
     session.notify('vs_code')
     session.notify('macos')
 
