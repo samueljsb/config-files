@@ -48,8 +48,7 @@ def main() -> int:
     log_lines = _git('log', f'{args.base_ref}..', '--format=format:%D').split('\n')
 
     branches = _parse_branches(log_lines, args.base_ref, remotes)
-    _git('push', '--quiet', args.force_flag, '--atomic', 'origin', *branches)
-    print('pushed branches atomically:', ', '.join(branches))
+    _git('push', args.force_flag, '--atomic', 'origin', *branches)
 
     return 0
 
