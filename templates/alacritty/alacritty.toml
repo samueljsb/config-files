@@ -61,6 +61,8 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 
 [keyboard]
 bindings = [
+  # command+T opens new window in the current directory
+  { key = "T", mods = "Command", action = "CreateNewWindow" },
   # command+N opens new window in home directory
   { key = "N", mods = "Command", action = "SpawnNewInstance" },
   # alt+left and alt+right move word-wise left/right
