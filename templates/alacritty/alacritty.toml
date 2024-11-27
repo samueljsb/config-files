@@ -62,7 +62,7 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 [keyboard]
 bindings = [
   # command+N opens new window in home directory
-  { key = "N", mods = "Command", command = { program = "/Applications/Alacritty.app/Contents/MacOS/alacritty"} },
+  { key = "N", mods = "Command", action = "SpawnNewInstance" },
   # alt+left and alt+right move word-wise left/right
   { key = "Right", mods = "Alt", chars = "\u001Bf" },
   { key = "Left",  mods = "Alt", chars = "\u001Bb" },
