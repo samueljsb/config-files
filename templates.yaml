@@ -13,6 +13,7 @@ config_files:
     -   template: aerospace/aerospace.toml
     -   template: alacritty/alacritty.toml
     -   template: gh/config.yml
+    -   template: ghostty/config
     -   template: git/attributes
     -   template: git/commit-msg.txt
     -   template: git/config
