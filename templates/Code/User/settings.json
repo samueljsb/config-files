@@ -25,6 +25,7 @@
   "[yaml]": {
     "editor.formatOnSaveMode": "file"
   },
+  "chat.commandCenter.enabled": false,
   "color-highlight.markRuler": false,
   "color-highlight.markerType": "dot-after",
   "debug.showInStatusBar": "never",
