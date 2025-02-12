@@ -170,7 +170,6 @@ VS_CODE_EXTENSIONS = (
         'codezombiech.gitignore',
         'fabiospampinato.vscode-open-in-github',
         'sidneys1.gitconfig',
-        'waderyan.gitblame',
         # Python
         'charliermarsh.ruff',
         'lextudio.restructuredtext',
