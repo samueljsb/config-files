@@ -21,3 +21,4 @@ working-directory = home
 window-inherit-working-directory = false
 
 keybind = cmd+t=unbind
+keybind = global:cmd+grave_accent=toggle_quick_terminal
