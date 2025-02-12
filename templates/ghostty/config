@@ -16,3 +16,6 @@ macos-option-as-alt = left
 # disable shell-integration for cursor,
 # to prevent it from blinking.
 shell-integration-features = no-cursor
+
+working-directory = home
+window-inherit-working-directory = false
