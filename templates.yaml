@@ -11,7 +11,6 @@ config_files:
     output_dir: ~/.config/
     templates:
     -   template: aerospace/aerospace.toml
-    -   template: alacritty/alacritty.toml
     -   template: gh/config.yml
     -   template: ghostty/config
     -   template: git/attributes
