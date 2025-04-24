@@ -329,6 +329,10 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 export COLIMA_HOME="$XDG_CONFIG_HOME/colima"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 
+# AWS
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_DATA_HOME/aws/credentials"
+
 
 {% if macos %}
 ########
