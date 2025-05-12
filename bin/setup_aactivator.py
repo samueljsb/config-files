@@ -30,6 +30,11 @@ def main() -> int:
     os.chmod('.deactivate.sh', 0o600)
 
     if args.git_exclude:
+        try:
+            os.mkdir('.git/info')
+        except FileExistsError:
+            pass
+
         with open('.git/info/exclude', 'a') as fd:
             fd.write('.activate.sh\n')
             fd.write('.deactivate.sh\n')
