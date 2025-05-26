@@ -29,12 +29,12 @@ repos:
     hooks:
     -   id: check-json5
 -   repo: https://github.com/asottile/reorder-python-imports
-    rev: v3.14.0
+    rev: v3.15.0
     hooks:
     -   id: reorder-python-imports
         args: [--py37-plus]
 -   repo: https://github.com/asottile/add-trailing-comma
-    rev: v3.1.0
+    rev: v3.2.0
     hooks:
     -   id: add-trailing-comma
 -   repo: https://github.com/PyCQA/flake8
