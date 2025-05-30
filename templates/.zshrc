@@ -348,23 +348,6 @@ export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/
 
 
 {% endif %}
-{% if kraken %}
-################
-# Work (Kraken)
-################
-
-# kraken-db-tools
-export KRAKEN_CLIENT=oegb
-export KRAKEN_DB_PG_CLIENT=pgcli
-export KRAKEN_DB_CONCURRENCY=26
-alias kdb=kraken-db
-
-function all-dbs-count(){
-  all-dbs --all "select count(1) from $@"
-}
-
-
-{% endif %}
 #####
 
 # Add user bin directory to PATH
