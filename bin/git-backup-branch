@@ -1,0 +1,19 @@
+#!/bin/bash
+# Create a backup branch of the current branch.
+
+set -euo pipefail
+
+# Get the current branch name and append `--bak` to it.
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+backup_branch="${current_branch}--bak"
+
+# Check the backup branch doesn't already exist.
+already_exists="$(git branch --list "${backup_branch}")"
+if [[ -n $already_exists ]]; then
+    echo "${backup_branch} already exists"
+    exit 1
+fi
+
+# Create the backup branch.
+git branch "${backup_branch}"
+echo "Created backup branch: ${backup_branch}"
