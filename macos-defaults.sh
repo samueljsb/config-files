@@ -2,6 +2,11 @@
 
 defaults write com.apple.ncprefs content_visibility -int 2  # notif previews only when unlocked
 
+# set directory for screenshots
+SCREENSHOTS_DIR="$HOME/.local/share/screenshots"
+mkdir -p $SCREENSHOTS_DIR
+defaults write com.apple.screencapture location $SCREENSHOTS_DIR
+
 
 # Dock
 # ====
