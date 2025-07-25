@@ -97,4 +97,4 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeS
 # ========
 
 # Map the capslock key to escape
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}'
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}' > /dev/null
