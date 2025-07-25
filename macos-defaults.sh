@@ -25,6 +25,26 @@ defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tr-corner -int 0
 
+# put screenshots directory in dock
+if ! defaults read com.apple.dock persistent-others | grep --silent $SCREENSHOTS_DIR; then
+  defaults write com.apple.dock persistent-others -array-add "\
+    <dict>\
+      <key>tile-data</key>\
+        <dict>\
+          <key>file-data</key>\
+            <dict>\
+              <key>_CFURLString</key> <string>file://$SCREENSHOTS_DIR</string>\
+              <key>_CFURLStringType</key> <integer>15</integer>\
+            </dict>\
+
+          <key>file-type</key> <integer>2</integer>\
+          <key>showas</key> <integer>0</integer>\
+        </dict>\
+
+      <key>tile-type</key> <string>directory-tile</string>\
+    </dict>"
+fi
+
 killall Dock
 
 
