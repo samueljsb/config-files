@@ -1,0 +1,12 @@
+#!/bin/bash
+# Upgrade all installed Pythons using `mopup`
+
+set -euo pipefail
+
+installed_pythons="$(find /Library/Frameworks/Python.framework/Versions/*/bin -maxdepth 1 -mindepth 1 -type f | grep -E 'python3\.[0-9]+$' | xargs -n1 basename | sort | uniq)"
+
+echo 'Found pythons to upgrade:' $installed_pythons
+
+for python_version in $installed_pythons; do
+  pipx run --python "$python_version" mopup
+done
