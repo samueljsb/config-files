@@ -86,6 +86,7 @@
   "openInGitHub.useLocalRange": true,
   "python.languageServer": "Pylance",
   "restructuredtext.editor.listEditing.list.indentationSize": "inherit",
+  "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "Hack Nerd Font",
