@@ -158,12 +158,12 @@ VS_CODE_EXTENSIONS = (
         'alefragnani.Bookmarks',
         'artdiniz.quitcontrol-vscode',
         'byi8220.indented-block-highlighting',
+        'dnut.rewrap-revived',
         'EditorConfig.EditorConfig',
         'formulahendry.auto-close-tag',
         'mikestead.dotenv',
         'naumovs.color-highlight',
         'PKief.material-icon-theme',
-        'stkb.rewrap',
         'swyphcosmo.spellchecker',
         # Git
         'codezombiech.gitignore',
