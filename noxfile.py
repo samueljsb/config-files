@@ -103,6 +103,9 @@ BREW_PACKAGES = (
     'git',
     'git-absorb',
     'gitui',
+    # language servers
+    'typos-lsp',
+    'vale',
 )
 BREW_MACOS_PACKAGES = (
     'findutils',  # find, locate, updatedb, xargs
