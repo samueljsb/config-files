@@ -18,7 +18,7 @@ def _update_files(version: str, date: datetime.date) -> None:
 
     for line in fileinput.input('CHANGELOG.md', inplace=True):
         print(line, end='')
-        if line == '## Unreleased\n':
+        if line in ('## Unreleased\n', '## [Unreleased]\n'):
             print('')
             print(f'## [{version}] - {date.isoformat()}')
 
