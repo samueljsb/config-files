@@ -310,7 +310,7 @@ fi
 
 # pager options
 export LESS='-SRF --tabs=4'
-export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 
 if [ -x "$(command -v bat)" ]; then
   export PAGER='bat -p'
