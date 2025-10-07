@@ -251,6 +251,7 @@ fi
 alias python=python3
 
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 
 export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
 
