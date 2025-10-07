@@ -33,6 +33,9 @@
 [color]
   ui = true
 
+[color "status"]
+  untracked = yellow
+
 # Use a template for the commit message.
 [commit]
   template = ~/.config/git/commit-msg.txt
