@@ -94,5 +94,6 @@
   "terminal.integrated.fontFamily": "Hack Nerd Font",
   "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.settings.enableNaturalLanguageSearch": false
 }
