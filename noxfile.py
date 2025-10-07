@@ -19,7 +19,7 @@ def bootstrap(session: nox.Session) -> None:
     session.notify('write')
     session.notify('write_bin')
     session.notify('brew')
-    session.notify('pipx')
+    session.notify('uv_tool')
     session.notify('vs_code')
     session.notify('macos')
 
@@ -134,25 +134,24 @@ def brew(session: nox.Session) -> None:
         )
 
 
-PIPX_PACKAGES = (
+PYTHON_TOOLS = (
     'aactivator',
     'nox',
     'litecli',
     'pgcli',
     'pre-commit',
     'tox',
-    'uv',
 )
 
 
 @nox.session(python=False)
-def pipx(session: nox.Session) -> None:
-    """Install packages with pipx."""
-    if not shutil.which('pipx'):
-        session.error('pipx not installed')
+def uv_tool(session: nox.Session) -> None:
+    """Install tools with uv."""
+    if not shutil.which('uv'):
+        session.error('uv not installed')
 
-    for package in PIPX_PACKAGES:
-        session.run('pipx', 'install', package)
+    for package in PYTHON_TOOLS:
+        session.run('uv', 'tool', 'install', package)
 
 
 VS_CODE_EXTENSIONS = (
