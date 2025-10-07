@@ -12,7 +12,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # Homebrew
 ###########
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$("$(brew --prefix)/bin/brew" shellenv)"
 
 ############
 # oh-my-zsh
