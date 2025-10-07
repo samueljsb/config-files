@@ -235,7 +235,7 @@ function pre-commit-changes() {
 #######
 
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/repl_history"
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node/repl_history"
 
 export PATH="$PATH:${XDG_DATA_HOME}/npm/bin"
 
@@ -329,7 +329,7 @@ fi
 # PostgreSQL
 # CLI tools that come with the app.
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
+export PSQL_HISTORY="$XDG_STATE_HOME/psql/history"
 
 # Docker
 export COLIMA_HOME="$XDG_CONFIG_HOME/colima"
