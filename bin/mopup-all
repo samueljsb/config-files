@@ -8,5 +8,5 @@ installed_pythons="$(find /Library/Frameworks/Python.framework/Versions/*/bin -m
 echo 'Found pythons to upgrade:' $installed_pythons
 
 for python_version in $installed_pythons; do
-  pipx run --python "$python_version" mopup
+  uv tool run --python "$python_version" mopup
 done
