@@ -92,7 +92,6 @@ BREW_PACKAGES = (
     'fzf',
     'helix',
     'less',
-    'pipx',
     'starship',
     'zsh',
     'zsh-autosuggestions',
