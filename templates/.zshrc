@@ -2,6 +2,7 @@
 # XDG
 ######
 
+export XDG_BIN_HOME="$HOME/.local/bin"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -261,12 +262,12 @@ export PIP_REQUIRE_VIRTUALENV=1
 
 export PIPX_DEFAULT_PYTHON=python3.12
 export PIPX_HOME="$XDG_STATE_HOME/pipx"
-export PIPX_BIN_DIR="$HOME/.local/bin"
+export PIPX_BIN_DIR="$XDG_BIN_HOME"
 
 export VIRTUALENV_CONFIG_FILE="$XDG_CONFIG_HOME/virtualenv/virtualenv.ini"
 
-if [ -x "$(command -v "$PIPX_BIN_DIR/aactivator")" ]; then
-  eval "$("$PIPX_BIN_DIR/aactivator" init)"
+if [ -x "$(command -v "$XDG_BIN_HOME/aactivator")" ]; then
+  eval "$("$XDG_BIN_HOME/aactivator" init)"
 fi
 
 alias zen="python -c 'import this'"
@@ -357,7 +358,7 @@ export PATH="$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/
 #####
 
 # Add user bin directory to PATH
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$XDG_BIN_HOME:$PATH"
 
 
 ######################
