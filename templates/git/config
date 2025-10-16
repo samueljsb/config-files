@@ -19,6 +19,7 @@
 
 [alias]
   # Make some things prettier.
+  branches = branch --format='%(color:green)%(HEAD)%(color:reset) %(if)%(upstream)%(then)%(else)%(color:dim)%(end)%(refname:short)%(color:reset) %(color:blue)%(upstream:track)%(color:reset)'
   grep = grep --break --heading
   lg = log --oneline --graph --decorate
 
