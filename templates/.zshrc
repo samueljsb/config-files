@@ -178,7 +178,7 @@ function grf() {
     echo "\033[33mmigrations have changed\033[0m"
   fi
 
-  git-branches
+  git branches
 }
 
 function gfu(){
