@@ -150,7 +150,7 @@ def uv_tool(session: nox.Session) -> None:
 
     for package in PYTHON_TOOLS:
         session.run(
-            'uv', 'tool', 'install', package,
+            'uv', 'tool', 'install', '--upgrade', package,
             env={
                 'UV_PYTHON': os.getenv('UV_PYTHON', sys.executable),
             },
