@@ -152,7 +152,7 @@ def uv_tool(session: nox.Session) -> None:
         session.run(
             'uv', 'tool', 'install', package,
             env={
-                'UV_PYTHON': os.getenv('UV_PYTHON', ''),
+                'UV_PYTHON': os.getenv('UV_PYTHON', sys.executable),
             },
         )
 
