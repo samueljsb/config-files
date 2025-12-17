@@ -258,10 +258,6 @@ export NOX_DEFAULT_VENV_BACKEND='uv|virtualenv'
 
 export PIP_REQUIRE_VIRTUALENV=1
 
-export PIPX_DEFAULT_PYTHON=python3.12
-export PIPX_HOME="$XDG_STATE_HOME/pipx"
-export PIPX_BIN_DIR="$XDG_BIN_HOME"
-
 export VIRTUALENV_CONFIG_FILE="$XDG_CONFIG_HOME/virtualenv/virtualenv.ini"
 
 if [ -x "$(command -v "$XDG_BIN_HOME/aactivator")" ]; then
