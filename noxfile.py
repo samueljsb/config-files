@@ -149,7 +149,12 @@ def uv_tool(session: nox.Session) -> None:
         session.error('uv not installed')
 
     for package in PYTHON_TOOLS:
-        session.run('uv', 'tool', 'install', package)
+        session.run(
+            'uv', 'tool', 'install', package,
+            env={
+                'UV_PYTHON': os.getenv('UV_PYTHON', ''),
+            },
+        )
 
 
 VS_CODE_EXTENSIONS = (
