@@ -1,0 +1,8 @@
+! Hide GitHub Copilot BS
+github.com##.ActionBar-item:has(.octicon-copilot) + .ActionBar-divider
+github.com##.ActionBar-item:has(.octicon-copilot),
+github.com##.Stack:has(.octicon-copilot),
+github.com##.TimelineItem:has(.avatar:has(.octicon-copilot))
+github.com##button:has(.octicon-copilot)
+github.com##div[class*="Copilot"]
+github.com##li[role="menuitem"]:has(.octicon-copilot)
