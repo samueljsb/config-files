@@ -25,7 +25,7 @@ repos:
     -   id: sort-lines
         args: [--case-insensitive]
 -   repo: https://gitlab.com/bmares/check-json5
-    rev: v1.0.0
+    rev: v1.0.1
     hooks:
     -   id: check-json5
 -   repo: https://github.com/asottile/reorder-python-imports
