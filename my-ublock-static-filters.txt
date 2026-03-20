@@ -6,3 +6,4 @@ github.com##.TimelineItem:has(.avatar:has(.octicon-copilot))
 github.com##button:has(.octicon-copilot)
 github.com##div[class*="Copilot"]
 github.com##li[role="menuitem"]:has(.octicon-copilot)
+github.com##li:has(.octicon-agent)
