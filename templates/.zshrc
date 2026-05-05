@@ -196,6 +196,8 @@ function gaf(){
   git diff --name-only --no-relative | fzf --multi --query="$@" | xargs git -C "$(git rev-parse --show-toplevel)" add
 }
 
+export GH_TELEMETRY=false
+
 # Create a new PR in the origin repo
 function newpr() {
   currentBranch="$(git branch --show-current)"
@@ -333,6 +335,8 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 # AWS
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_DATA_HOME/aws/credentials"
+
+export DO_NOT_TRACK=true
 
 
 {% if macos %}
