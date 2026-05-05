@@ -11,3 +11,4 @@ pager: 'less -RFX'
 aliases:
     co: pr checkout
     newpr: pr create --fill --web
+telemetry: disabled
