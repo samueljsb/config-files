@@ -1,0 +1,15 @@
+#!/bin/bash
+# Run nox/tox to get fast feedback.
+
+set -euo pipefail
+
+if [[ -a noxfile.py ]]; then
+  set -x
+  nox -x $@
+elif [[ -a tox.ini ]]; then
+  set -x
+  tox --fail-fast $@
+else
+  echo Project uses neither nox nor tox
+  exit 127
+fi
