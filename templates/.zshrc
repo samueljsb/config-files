@@ -14,6 +14,10 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 eval "$("$(brew --prefix)/bin/brew" shellenv)"
 
+# Homebrew likes to put its own bin directories at the top of PATH,
+# so I need to put tools I have installed specifically back above it.
+export PATH="/usr/local/bin:$PATH"
+
 ############
 # oh-my-zsh
 ############
