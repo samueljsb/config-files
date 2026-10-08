@@ -1,0 +1,25 @@
+#!/bin/bash
+# Swap two aerospace workspaces.
+
+set -euo pipefail
+
+DST_WORKSPACE_NAME=$1
+SRC_WORKSPACE_NAME=${2:-$(aerospace list-workspaces --focused)}
+
+TMP_WORKSPACE_NAME='tmp'
+
+DST_WINDOW_IDS="$(aerospace list-windows --workspace "$DST_WORKSPACE_NAME" --json | jq 'reverse .[]."window-id"')"
+SRC_WINDOW_IDS="$(aerospace list-windows --workspace "$SRC_WORKSPACE_NAME" --json | jq 'reverse .[]."window-id"')"
+
+move_nodes_to_workspace() {
+  WORKSPACE_NAME=$1
+  WINDOW_IDS="${*:2}"
+
+  for WINDOW_ID in $WINDOW_IDS; do
+      aerospace move-node-to-workspace --window-id "$WINDOW_ID" "$WORKSPACE_NAME"
+  done
+}
+
+move_nodes_to_workspace "$TMP_WORKSPACE_NAME" "$DST_WINDOW_IDS"
+move_nodes_to_workspace "$DST_WORKSPACE_NAME" "$SRC_WINDOW_IDS"
+move_nodes_to_workspace "$SRC_WORKSPACE_NAME" "$DST_WINDOW_IDS"
