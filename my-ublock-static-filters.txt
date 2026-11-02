@@ -1,4 +1,4 @@
 ! Hide GitHub Copilot BS
 github.com###global-copilot-agent-button
 github.com##.GlobalNav a:has(.octicon-copilot)
-github.com##section:has(.octicon-copilot)
+github.com##.pull-discussion-timeline section:has(.octicon-copilot)
